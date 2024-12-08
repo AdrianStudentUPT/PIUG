@@ -1,0 +1,63 @@
+﻿    /* General styles */
+#HEADER {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.left-zone {
+    flex: 0 0 auto; /* Maintain size based on content */
+}
+
+.right-zone {
+    flex: 0 0 auto; /* Maintain size based on content */
+    margin-left: auto; /* Push to the right */
+}
+
+.center-zone {
+    flex: 1; /* Take up available space */
+    text-align: center;
+}
+
+    .center-zone a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    #HEADER {
+        flex-wrap: wrap; /* Allow zones to wrap */
+    }
+
+    .left-zone, .right-zone {
+        flex: 0 0 50%; /* Each takes half width */
+    }
+
+    .right-zone {
+        text-align: right;
+    }
+
+    .center-zone {
+        flex: 1 0 100%; /* Take full width below left/right zones */
+        margin-top: 10px; /* Add spacing for clarity */
+    }
+}
+
+@media (max-width: 500px) {
+    .left-zone, .right-zone {
+        flex: 0 0 100%; /* Stack left and right zones vertically */
+    }
+
+    .center-zone {
+        flex: 1 0 100%; /* Continue to occupy full width below */
+    }
+
+    .right-zone {
+        text-align: right;
+    }
+}

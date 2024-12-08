@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
- 
-    <!--temporary example for dynamic screens-->
-    <style>
-        /* for all screens, use 14px font size */
-        body {  
-            color: darkgreen;    
-        }
-        /* responsive, form small screens, use 13px font size */
-        @media (max-width: 600px) {
-            body {
-                color: red;
-            }
-        }
-    </style>
 
-  </head>
-  <body>
-    <div>Header</div>
-    <main>
-        <h1>Welcome to My Game Store Website</h1>  
-    </main>
-    <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-        <p>Top menu</p>
-        <a href="https://www.google.com/">Other page</a>
-        <p>Five pages: Home/Store, Help/Support, News, Wallet+Inventory / My Library? OR Profile + Login?, Category/Sort?</p>
-        <p>
-            For inventory the user can have a list of owned titles and a certain value of credits he can use to 
-            purchase content? Form for purchasing credits? The inventory page can have the user signed in.
-        </p>
-        <a href="https://www.google.com/">Search</a>
-    </div>
-    <p>Title info: Image, Name, Tags, Price, Short description? WHEN selected?, Platforms?</p>
+    <title>Welcome to Haze</title> <!-- Tab name -->
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- Tab icon -->
 
-    <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-        <p>Carusel de imagini</p>
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_header_3.css">
+    <link rel="stylesheet" href="style_news.css">
+
+    <script src="script_main.js"></script>
+    <script src="script_news.js"></script>
+    <script>
+        window.numberOfNews = 6; // Number of images in the "news" folder
+        window.minWidthForNewsCard = 400;
+        window.newsAutoDelay = 100; // Auto-scroll delay for NEWS
+    </script>
+</head>
+<body id="body">
+    <div id="HEADER">
+        <div class="header-side">
+            <img class="header-logo" src="media/logo.png" />
+        </div>
+        <div class="menu">
+            <a href="index.html" class="active">HOME</a>
+            <a href="page_inventory.html">INVENTORY</a>
+            <a href="page_store.html">STORE</a>
+            <a href="page_support.html">SUPPORT</a>
+            <a href="page_settings.html">SETTINGS</a>
+            <a href="page_about.html">ABOUT</a>
+        </div>
+        <div class="header-side">
+            <img class="header-logo" src="media/logo.png" />
+        </div>
     </div>
 
-    <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-        <p>Tabel de componente</p>
-        <p>Flex grid?</p>
+    <div id="NEWS">
+        <div class="image-container"></div>
+        <div class="navigation">
+            <button id="left-arrow">&lt;</button>
+            <button id="right-arrow">&gt;</button>
+        </div>
+        <div class="markers"></div>
     </div>
 
-    <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-        <p>Forum de contact</p>
-        <p>Help button</p>
-        <p>Specific pentru buttonul Help?</p>
+    <div>
+        <p id="TRAILERS_TITLE">TRAILERS</p>
     </div>
 
-    <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-        <p>Video player</p>
+    <div id="TRAILERS">
+        <div class="trailer_entry">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="trailer_entry">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="trailer_entry">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="trailer_entry">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 
-    <a href="https://www.google.com/">Social media links/connections (Just the icons with some implied functionality)</a>
-    <p>Share on XYZ</p>
-    <p>View on XYZ</p>
+    <button id="darkModeToggle">Dark Mode: OFF</button>
 
-    <a href="https://www.google.com/">Change website theme</a>
-    <a href="https://www.google.com/">UP/DOWN buttons</a>
-
-    <p>Text + Images</p>
-    <p>Page addapts to custom screen dimensions</p>
     <p>Google Analytics integration</p>
     <a href="https://www.w3schools.com/howto/howto_google_analytics.asp">HERE</a>
 
-    <!--website favicon.ico-->
-    <p>Image by <a href="/">Freeimages.com</a></p>
-
-    <div>Footer</div>
-    <script src="index.js"></script>      
-  </body>
+    <div id="FOOTER">
+        <!--Tab icon.ico-->
+        <p>Image by <a href="https://www.freeimages.com/" target="_blank">Freeimages.com</a></p>
+        <!--Social media icons-->
+        <p>Social media icons - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
+        <p>Social media icons license - <a href="https://icons8.com/license" target="_blank"></a>HERE</p>
+    </div>
+</body>
 </html>

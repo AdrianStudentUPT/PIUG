@@ -1,0 +1,93 @@
+﻿/* General styling */
+#HEADER {
+    width: 80%;
+    min-width: 370px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10%; */
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+    #HEADER .menu {
+        flex-grow: 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px; /* Ensures no extra spacing between links unless specified */
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 800px;
+    }
+
+    #HEADER .header-side {
+        flex-grow: 1;
+        flex-shrink: 100;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 110px;
+        max-width: 200px;
+        max-height: 50px;
+    }
+    /* Logo styling */
+    #HEADER .logo {
+        width: 100px;
+        height: 50px;
+    }
+
+.menu a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    /*    border: 1px solid #ddd;*/
+    /*    box-sizing: border-box;*/
+    transition: background-color 0.3s, color 0.3s;
+    flex: 1 0 10%; /* Default: each link takes 1/6th of the row width */
+    height: 50px; /* Set a uniform height */
+    border-radius: 10px;
+}
+
+    .menu .active {
+        color: red;
+    }
+
+    .menu a:hover {
+        background-color: #ddd;
+        color: #000;
+    }
+
+@media screen and (max-width: 1350px) {
+    #HEADER .header-side {
+        display: none;
+    }
+}
+
+/* Responsiveness for different screen widths */
+@media screen and (max-width: 1075px) {
+    #HEADER .menu {
+        min-width: 400px;
+        gap: 10px;
+    }
+
+        #HEADER .menu a {
+            flex: 1 0 30%; /* Two rows of three links */
+            height: 30px; /* Set a uniform height */
+        }
+}
+
+@media screen and (max-width: 570px) {
+    #HEADER .menu {
+        min-width: 250px;
+    }
+
+        #HEADER .menu a {
+            flex: 1 0 45%; /* Two rows of three links */
+        }
+}
