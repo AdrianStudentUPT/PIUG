@@ -1,16 +1,15 @@
 :root {
-    --light_tone_1: #2B8099;
-    --light_tone_2: #59C0C5;
-    --light_tone_3: #A8E0CA;
-    --light_tone_4: #EEF1EA;
-    --light_tone_5: #fcfcfc;
-    --light_tone_6: #e9e9e9;
-    --dark_tone_1: #0b132b;
-    --dark_tone_2: #1c2541;
-    --dark_tone_3: #3a506b;
-    --dark_tone_4: #5bc0be;
-    --dark_tone_5: #6fffe9;
+    /* Light theme*/
+    --color_tone_1: rgba(218, 255, 252, 1); /* Buttons */
+    --color_tone_2: rgba(168, 224, 202, 1); /* Active button */
+    --color_tone_3: rgba(233, 233, 233, 1); /* Background */
+    --color_tone_4: rgba(43, 128, 153, 1); /* Header, Trailers, News markers*/
+    --color_tone_5: rgba(76, 0, 153, 1); /* Trailers title */
+    --color_tone_6: rgba(233, 233, 233, 0.5); /* Transparent widget */
+    --color_tone_7: rgba(160, 160, 255, 1); /* Button hover, Footer links*/
+    --color_tone_8: rgba(255, 255, 255, 1); /* Trailers title text*/
     --default_margin: 30px;
+    --box_shadow_1: 0px 8px 16px rgba(0, 0, 0, 0.2), 0px -8px 16px rgba(0, 0, 0, 0.2), 8px 0px 16px rgba(0, 0, 0, 0.2), -8px 0px 16px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -28,53 +27,123 @@
 
 /* for all screens, use 14px font size */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light_tone_6); /* Default: light mode */
-    color: black; /* Text color for light mode */
+    background-color: var(--color_tone_3);
     min-width: 480px;
 }
 
-body.dark-mode {
-    background-color: var(--dark_tone_1);
-    color: var(--dark_tone_5);
-}
-
-#TRAILERS {
+/* General styling */
+#HEADER {
     width: 80%;
-    margin: 0 auto;
-    background-color: gray;
+    min-width: 370px;
+    max-width: 1920px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: var(--color_tone_4);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* gap: 10%; */
     align-items: center;
-    gap: 30px;
-    padding: 30px 0;
-    overflow:hidden;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow_1);
 }
 
-#TRAILERS_TITLE {
-    width: 80%;
-    height: 50px;
-    margin: 0 auto;
-    text-align:center;
-    background-color: purple;
+    #HEADER .menu {
+        flex-grow: 3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px; /* Ensures no extra spacing between links unless specified */
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 800px;
+    }
+
+    #HEADER .header-side {
+        flex-grow: 1;
+        flex-shrink: 100;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 110px;
+        max-width: 200px;
+        max-height: 50px;
+    }
+    /* Logo styling */
+    #HEADER .header-logo {
+        height: 50px;
+        object-fit: contain;
+    }
+
+.menu a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color_tone_1);
+    color: black;
+    box-shadow: var(--box_shadow_1);
+/*    transition: background-color 0.3s, color 0.3s;*/
+    flex: 1 0 10%; /* Default: each link takes 1/6th of the row width */
+    height: 50px; /* Set a uniform height */
     border-radius: 10px;
 }
 
+.menu .active {
+    background-color: var(--color_tone_2);
+}
+
+.menu a:hover {
+    background-color: var(--color_tone_7);
+}
+
+@media screen and (max-width: 1640px) {
+    #HEADER .header-side {
+        display: none;
+    }
+}
+
+/* Responsiveness for different screen widths */
+@media screen and (max-width: 1200px) {
+    #HEADER .menu {
+        min-width: 400px;
+        gap: 10px;
+    }
+
+        #HEADER .menu a {
+            flex: 1 0 30%; /* Two rows of three links */
+            height: 30px; /* Set a uniform height */
+        }
+}
+
+@media screen and (max-width: 600px) {
+    #HEADER .menu {
+        min-width: 250px;
+    }
+
+        #HEADER .menu a {
+            flex: 1 0 45%; /* Two rows of three links */
+        }
+}
+
 #FOOTER {
-    color: white;
-    background-color: darkseagreen;
+    background-color: rgba(40, 40, 40, 1);
     width: calc(100% - 20px * 2);
     padding: 20px;
+    margin-top: 30px;
 }
 
 #FOOTER p {
+    color: rgba(200, 200, 200, 1);
     margin: 0 0 10px 0;
+}
+
+#FOOTER a {
+    color: rgba(160, 160, 255, 1);
 }
 
 /* Scroll bar */
 body::-webkit-scrollbar {
-    width: 12px; /* width of the entire scrollbar */
+    width: 0px; /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {

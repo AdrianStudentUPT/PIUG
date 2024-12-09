@@ -6,24 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Welcome to Haze</title> <!-- Tab name -->
-    <link rel="icon" href="media/favicon.ico" type="image/x-icon"> <!-- Tab icon -->
+    <link rel="icon" href="media/tab.png" type="image/x-icon"> <!-- Tab icon -->
 
     <link rel="stylesheet" href="style_main.css">
-    <link rel="stylesheet" href="style_header_3.css">
-    <link rel="stylesheet" href="style_news.css">
+    <script src="script_main.js"></script>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
-
-    <script src="script_main.js"></script>
-    <script src="script_news.js"></script>
-    <script>
-        window.numberOfNews = 6; // Number of images in the "news" folder
-        window.minWidthForNewsCard = 400;
-        window.newsAutoDelay = 100; // Auto-scroll delay for NEWS
-    </script>
 
     <!-- Google Analytics -->
     <!-- Google tag (gtag.js) -->
@@ -36,6 +27,14 @@
         gtag('config', 'G-TN1JE7EBHN');
     </script>
     <!-- End Google Analytics -->
+
+    <link rel="stylesheet" href="style_home.css">
+    <script src="script_news.js"></script>
+    <script>
+        window.numberOfNews = 6; // Number of images in the "news" folder
+        window.minWidthForNewsCard = 400;
+        window.newsAutoDelay = 100; // Auto-scroll delay for NEWS
+    </script>
 </head>
 <body id="body">
     <div id="HEADER">
@@ -64,36 +63,33 @@
         <div class="markers"></div>
     </div>
 
-    <div>
-        <p id="TRAILERS_TITLE">TRAILERS</p>
+    <div id="TRAILERS_TITLE">
+        <p>#UP-AND-COMMING</p>
     </div>
 
     <div id="TRAILERS">
         <div class="trailer_entry">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="trailer_entry">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="trailer_entry">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="trailer_entry">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="trailer_entry">
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="trailer_entry">
+            <iframe src="https://www.youtube.com/embed/u7kdVe8q5zs?si=Ik5KrdiIYPmIPTzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
-    <button id="darkModeToggle">Dark Mode: OFF</button>
-
-    <p>Google Analytics integration</p>
-    <a href="https://www.w3schools.com/howto/howto_google_analytics.asp">HERE</a>
-
     <div id="FOOTER">
-        <!--Tab icon.ico-->
-        <p>Image by <a href="https://www.freeimages.com/" target="_blank">Freeimages.com</a></p>
-        <!--Social media icons-->
-        <p>Social media icons - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
-        <p>Social media icons license - <a href="https://icons8.com/license" target="_blank"></a>HERE</p>
+        <p>Social media icons, Logo, and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
         <p>Custom font family - <a href="https://fonts.google.com/selection?lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FCalm" target="_blank">Google fonts/Lexend</a></p>
     </div>
 </body>

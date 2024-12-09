@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const icon = document.createElement("img");
                 icon.src = platform.src;
                 icon.alt = `${platform.name} Icon`;
+                icon.classList.add("social-icon");
 
                 iconButton.innerHTML = icon.outerHTML;
                 widgetContainer.appendChild(iconButton);
@@ -158,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to update the screen width
     function updateScreenWidth() {
-        numberOfNewsCards = Math.max(Math.floor(window.innerWidth / minWidthForNewsCard), 1);
+        numberOfNewsCards = Math.min(Math.max(Math.floor(window.innerWidth / minWidthForNewsCard), 1), 4);
         document.documentElement.style.setProperty('--number_of_news_cards', numberOfNewsCards);
         updateImages();
         updateMarkers();
