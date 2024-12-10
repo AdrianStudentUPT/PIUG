@@ -1,0 +1,182 @@
+﻿#STORE_MENU {
+    height: 50px;
+    padding: 20px;
+    background-color: var(--color_tone_4);
+    width: calc(60% - 40px);
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow_1);
+    text-align: center;
+}
+
+#STORE_GRID {
+    width: 90%;
+    min-height: calc(100vh - 300px);
+    background-color: rgba(200, 200, 200, 0);
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.game-card {
+    width: 400px; /* Rectangle width */
+    height: 300px; /* Rectangle height */
+    position: relative; /* Allows stacking of child elements */
+    overflow: visible; /* Ensures elements don't spill outside */
+    margin: 20px auto; /* Centers the game card horizontally with spacing */
+    /*border: 1px solid #ccc;*/ /* Optional border for visibility */
+    background-color: #fff; /* Optional background */
+    box-shadow: var(--box_shadow_1);
+    border-radius:10px;
+}
+
+    .game-card .title-banner {
+        width: 100%; /* Fills the width of the parent */
+        height: 100%; /* Fills the height of the parent */
+        object-fit: none;
+        object-position: center;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .game-card .title-details {
+        width: 100%; /* Matches parent width */
+        height: 100%; /* Matches parent height */
+        position: absolute; /* Stacks on top of the image banner */
+        top: 0; /* Aligns to the top of the parent */
+        left: 0; /* Aligns to the left of the parent */
+        display: flex;
+        flex-direction: column; /* Stacks content vertically */
+        justify-content: space-between; /* Distributes content vertically */
+        background-color: rgba(0, 0, 0, 0); /* Optional background overlay for readability */
+        color: #fff; /* White text for contrast */
+        padding: 10px; /* Adds spacing inside the container */
+        box-sizing: border-box; /* Includes padding in size calculation */
+        border-radius: 10px;
+    }
+
+.title-details div {
+    text-align: center; /* Centers the text inside each div */
+}
+
+.title-details .banner-view {
+    flex-grow: 1; /* This div grows to fill the space in title-details */
+}
+
+.title-details p {
+    margin: 10px auto; /* Centers the text horizontally */
+    padding: 5px;
+    display: inline-block; /* Shrinks the element to fit its content */
+    background-color: var(--color_tone_4); /* Default background color */
+    color: white; /* Default text color */
+    border: 1px solid #000; /* Optional border for visibility */
+    border-radius: 5px; /* Optional rounded corners */
+    text-align: center; /* Ensures text is centered within the background */
+}
+
+.title-details .game-title-price {
+    display: flex; /* Makes the container a flexbox */
+    align-items: center; /* Vertically aligns items */
+    justify-content: space-between; /* Ensures space between title and price */
+    width: 100%; /* Ensures the container spans the full width */
+}
+
+.title-details .game-title {
+    width: calc(100% - 130px); /* Allows the title to scale and fill remaining space */
+    margin: 10px 0; /* Adds spacing above and below */
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: left; /* Aligns text to the left */
+}
+
+.title-details .game-price {
+    width: 70px; /* Fixed width for the price tag */
+    margin: 10px 0; /* Adds spacing above and below */
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center; /* Centers text within the price tag */
+}
+
+.game-genres p {
+    margin: 10px auto; /* Centers the genres text */
+    padding: 5px;
+    display: inline-block; /* Makes the background size dynamic based on text length */
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.title-details .game-card-buttons {
+    display: flex;
+    justify-content: space-between; /* Spreads the buttons evenly */
+    align-items: center; /* Aligns buttons vertically */
+    margin: 0 auto; /* Centers the button container horizontally */
+    width: 90%; /* Keeps the container responsive */
+}
+
+    .title-details .game-card-buttons button {
+        width: 50px; /* Button size for upvote and downvote */
+        height: 50px; /* Button size for upvote and downvote */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Removes default padding */
+        border: none;
+        border-radius: 5px; /* Optional for rounded corners */
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+        background-color:var(--color_tone_2);
+    }
+
+        .title-details .game-card-buttons button img {
+            width: 44px; /* Icon size */
+            height: 44px; /* Icon size */
+        }
+
+        /* Button background colors */
+    .title-details .game-card-buttons .active {
+        background-color: #dc3545; /* Blue for upvote */
+    }
+
+        /*.title-details .game-card-buttons button:last-child .active {
+            background-color: #dc3545;*/ /* Red for downvote */
+        /*}*/
+
+        .title-details .game-card-buttons button:nth-child(2) {
+            min-width: 50%; /* Ensures the Buy button takes at least 50% width */
+            background-color: #28a745; /* Green for Buy button */
+            color: #fff; /* White text for Buy button */
+            font-size: 24px;
+        }
+
+        /* Hover effects */
+        .title-details .game-card-buttons button:first-child:hover {
+            background-color: #c82333; /* Darker red on hover for upvote */
+        }
+
+        .title-details .game-card-buttons button:last-child:hover {
+            background-color: #c82333; /* Darker red on hover for downvote */
+        }
+        .title-details .game-card-buttons button:nth-child(2):hover {
+            background-color: green; /* Darker green for Buy button */
+        }
+
+#STORE_SEARCH_FAILED {
+    width: 60%;
+    padding: 20px;
+    background-color: rebeccapurple;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow_1);
+    text-align: center;
+    display: none;
+}
+
+    #STORE_SEARCH_FAILED p {
+        color: white;
+    }

@@ -168,7 +168,7 @@
         display: flex; /* Enables flexbox for the <p> itself */
         align-items: center; /* Centers text vertically inside the <p> */
         justify-content: center; /* Centers text horizontally inside the <p> */
-        color: var(--color_tone_8);
+        color: white;
         background-color: var(--color_tone_5);
         padding: 0 20px;
         border-radius: 10px;

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.style.setProperty('--box_shadow_1', "0px 8px 16px rgba(255, 255, 255, 0.2), 0px -8px 16px rgba(255, 255, 255, 0.2), 8px 0px 16px rgba(255, 255, 255, 0.2), -8px 0px 16px rgba(255, 255, 255, 0.2)");
             if (button != null) {
                 button.textContent = "Dark Mode: ON";
+                button.style.backgroundColor = "rgba(218, 255, 252, 1)";
             }
         } else {
             document.documentElement.style.setProperty('--color_tone_1', "rgba(218, 255, 252, 1)");
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.style.setProperty('--box_shadow_1', "0px 8px 16px rgba(0, 0, 0, 0.2), 0px -8px 16px rgba(0, 0, 0, 0.2), 8px 0px 16px rgba(0, 0, 0, 0.2), -8px 0px 16px rgba(0, 0, 0, 0.2)");
             if (button != null) {
                 button.textContent = "Dark Mode: OFF";
+                button.style.backgroundColor = "rgba(150, 150, 150, 1)";
             }
         }
     }
@@ -52,16 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set initial state
     updateDarkMode();
-
-    // Select the header element
-    const header = document.getElementById("HEADER");
-
-    // Find the link with the "active" class inside the header
-    const activeLink = header.querySelector(".menu a.active");
-
-    if (activeLink) {
-        // Append ">" to the inner HTML of the active link
-        activeLink.innerHTML = ">> " + activeLink.innerHTML;
-    }
 });
 

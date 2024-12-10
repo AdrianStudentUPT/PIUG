@@ -1,0 +1,74 @@
+[
+	{
+		"title_ID": 1,
+		"title_name": "Adventures of Valor",
+		"title_price": 19.99,
+		"title_genres": [ "Adventure", "Fantasy", "RPG" ]
+	},
+	{
+		"title_ID": 2,
+		"title_name": "Racing Frenzy",
+		"title_price": 14.99,
+		"title_genres": [ "Racing", "Sports" ]
+	},
+	{
+		"title_ID": 3,
+		"title_name": "Mystery Manor",
+		"title_price": 9.99,
+		"title_genres": [ "Puzzle", "Mystery", "Casual" ]
+	},
+	{
+		"title_ID": 4,
+		"title_name": "Galactic Battles",
+		"title_price": 29.99,
+		"title_genres": [ "Strategy", "Sci-Fi", "Multiplayer" ]
+	},
+	{
+		"title_ID": 5,
+		"title_name": "Zombie Survival",
+		"title_price": 24.99,
+		"title_genres": [ "Action", "Horror", "Survival" ]
+	},
+	{
+		"title_ID": 6,
+		"title_name": "Farm Life Simulator",
+		"title_price": 12.99,
+		"title_genres": [ "Simulation", "Casual", "Family" ]
+	},
+	{
+		"title_ID": 7,
+		"title_name": "Ancient Warriors",
+		"title_price": 21.99,
+		"title_genres": [ "Strategy", "History", "War" ]
+	},
+	{
+		"title_ID": 8,
+		"title_name": "Sky High Builders",
+		"title_price": 15.99,
+		"title_genres": ["Building", "Management" ]
+	},
+	{
+		"title_ID": 9,
+		"title_name": "Fantasy Quest",
+		"title_price": 17.49,
+		"title_genres": [ "RPG", "Fantasy", "Adventure" ]
+	},
+	{
+		"title_ID": 10,
+		"title_name": "Cybernetic Showdown",
+		"title_price": 27.99,
+		"title_genres": [ "Sci-Fi", "Action", "Shooter" ]
+	},
+	{
+		"title_ID": 11,
+		"title_name": "Cybernetic Class 2",
+		"title_price": 4.99,
+		"title_genres": [ "Sci-Fi", "Action", "Shooter" ]
+	},
+	{
+		"title_ID": 12,
+		"title_name": "Hollow Edge",
+		"title_price": 17.99,
+		"title_genres": [ "Action", "Shooter" ]
+	}
+]

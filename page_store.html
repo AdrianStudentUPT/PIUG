@@ -7,6 +7,7 @@
     <link rel="icon" href="media/tab.png" type="image/x-icon"> <!-- Tab icon -->
 
     <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_store.css">
     <script src="script_main.js"></script>
 
     <!-- Google fonts -->
@@ -25,6 +26,7 @@
         gtag('config', 'G-TN1JE7EBHN');
     </script>
     <!-- End Google Analytics -->
+    <script src="script_store.js"></script>
 </head>
 <body>
     <div id="HEADER">
@@ -34,7 +36,7 @@
         <div class="menu">
             <a href="index.html">HOME</a>
             <a href="page_inventory.html">INVENTORY</a>
-            <a href="page_store.html" class="active">STORE</a>
+            <a href="page_store.html" class="active">>> STORE</a>
             <a href="page_support.html">SUPPORT</a>
             <a href="page_settings.html">SETTINGS</a>
             <a href="page_about.html">ABOUT</a>
@@ -43,19 +45,25 @@
             <img class="header-logo" src="media/logo.png" />
         </div>
     </div>
-    <div style="height:100vh; width: 100%;">
-        Store + Search
-        <p>Title info: Image, Name, Tags, Price, Short description? WHEN selected?, Platforms?</p>
-        <a href="https://www.google.com/">UP/DOWN buttons</a>
-
-        <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-            <p>Tabel de componente</p>
-            <p>Flex grid?</p>
-        </div>
+    <div id="STORE_MENU">
+        <input id="searchInput" type="text" placeholder="Looking for something?" style="width: calc(70% - 20px); min-width: 240px; padding: 10px; font-size: 16px; border-radius: 10px; margin: 5px 0;">
     </div>
+
+    <div id="STORE_SEARCH_FAILED">
+        <p>We're sorry. We could not identify what you might be looking for...</p>
+    </div>
+
+    <div id="STORE_GRID">
+
+    </div>
+
     <div id="FOOTER">
-        <p>Social media icons, Logo, and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
+        <p>Upvote and Downvote icons, Logo, and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
         <p>Custom font family - <a href="https://fonts.google.com/selection?lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FCalm" target="_blank">Google fonts/Lexend</a></p>
+        <p>Game Banners made using free online A.I. image generation tools:</p>
+        <p> - <a href="https://labs.envato.com/image-gen" target="_blank">Envato</a></p>
+        <p> - <a href="https://www.canva.com/ai-image-generator/" target="_blank">Canva</a></p>
+        <p> - <a href="https://deepdreamgenerator.com/generate" target="_blank">Deep Dream Generator</a></p>
     </div>
 </body>
 </html>

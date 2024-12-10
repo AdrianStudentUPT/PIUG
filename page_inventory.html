@@ -7,6 +7,7 @@
     <link rel="icon" href="media/tab.png" type="image/x-icon"> <!-- Tab icon -->
 
     <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="style_inventory.css">
     <script src="script_main.js"></script>
 
     <!-- Google fonts -->
@@ -33,7 +34,7 @@
         </div>
         <div class="menu">
             <a href="index.html">HOME</a>
-            <a href="page_inventory.html" class="active">INVENTORY</a>
+            <a href="page_inventory.html" class="active">>> INVENTORY</a>
             <a href="page_store.html">STORE</a>
             <a href="page_support.html">SUPPORT</a>
             <a href="page_settings.html">SETTINGS</a>
@@ -43,13 +44,31 @@
             <img class="header-logo" src="media/logo.png" />
         </div>
     </div>
-    <div style="height:100vh; width: 100%;">
-        Login
-        Logout
-        Collection
+
+    <div id="FOCUS">
+        <div id="FOCUS_BODY">
+            <div>
+                <p>You must be logged into your account to view your user profile and your inventory.</p>
+                <p>Please log into your account.</p>
+            </div>
+            <div class="form-group" style="width: 60%;">
+                <label for="email">Email or Username:</label>
+                <input type="email" id="email" name="email" placeholder="Email or Usename" required>
+            </div>
+            <div class="form-group" style="width: 60%;">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <button type="submit">
+                    Login
+                </button>
+            </div>
+        </div>
     </div>
+
     <div id="FOOTER">
-        <p>Social media icons, Logo, and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
+        <p>Logo and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
         <p>Custom font family - <a href="https://fonts.google.com/selection?lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FCalm" target="_blank">Google fonts/Lexend</a></p>
     </div>
 </body>

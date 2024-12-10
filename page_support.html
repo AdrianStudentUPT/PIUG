@@ -25,6 +25,8 @@
         gtag('config', 'G-TN1JE7EBHN');
     </script>
     <!-- End Google Analytics -->
+
+    <link rel="stylesheet" href="style_support.css">
 </head>
 <body>
     <div id="HEADER">
@@ -35,7 +37,7 @@
             <a href="index.html">HOME</a>
             <a href="page_inventory.html">INVENTORY</a>
             <a href="page_store.html">STORE</a>
-            <a href="page_support.html" class="active">SUPPORT</a>
+            <a href="page_support.html" class="active">>> SUPPORT</a>
             <a href="page_settings.html">SETTINGS</a>
             <a href="page_about.html">ABOUT</a>
         </div>
@@ -43,17 +45,65 @@
             <img class="header-logo" src="media/logo.png" />
         </div>
     </div>
-    <div style="height:100vh; width: 100%;">
-        Help + Feedback + Report
-        <div style="width: 80vw; height: 50vh; background-color: aqua; margin: 30px;">
-            <p>Forum de contact</p>
-            <p>Help button</p>
-            <p>Specific pentru buttonul Help?</p>
+
+    <div id="SUPPORT_ZONE">
+        <div id="contact-form">
+            <form id="contactForm">
+                <!-- Ticket Reason -->
+                <label for="reason">Reason for Contact:</label><br>
+                <select id="reason" name="reason" required>
+                    <option value="bug-report">Bug Report</option>
+                    <option value="content-report">Content report</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="question">I have a question</option>
+                    <option value="sell-on-haze">Sell on Haze</option>
+                    <option value="technical-issue">Technical issue</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <!-- Name and Email -->
+                <div class="form-row">
+                    <div class="form-group" style="width: 30%;">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group" style="width: 60%;">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div><br>
+
+                <!-- Message Box -->
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" placeholder="Describe your issue or question" minlength="100" required></textarea><br><br>
+
+                <!-- Submit Button -->
+                <div class="submit-wrapper">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+
     <div id="FOOTER">
-        <p>Social media icons, Logo, and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
+        <p>Logo and Tab icon - <a href="https://icons8.com/" target="_blank">Icons8.com</a></p>
         <p>Custom font family - <a href="https://fonts.google.com/selection?lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FCalm" target="_blank">Google fonts/Lexend</a></p>
     </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            const emailInput = document.getElementById("email");
+            const emailValue = emailInput.value.trim();
+
+            // Updated regular expression for stricter validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+            if (!emailRegex.test(emailValue)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+
 </body>
 </html>

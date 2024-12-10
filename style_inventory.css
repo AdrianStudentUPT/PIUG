@@ -1,0 +1,89 @@
+﻿/* General Styling */
+#FOCUS {
+    width: calc(80% - 40px);
+    height: 75vh;
+    margin: 0 auto;
+    min-width: 400px;
+    min-height: 500px;
+    background-color: var(--color_tone_4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box_shadow_1);
+}
+
+#FOCUS_BODY {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: wheat;
+}
+
+    /* Paragraph Styling */
+    #FOCUS_BODY p {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+/* Form Group Styling */
+.form-group {
+    width: 60%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+input[type="email"],
+input[type="password"] {
+    height: 30px;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+/* Button Styling */
+button[type="submit"] {
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    background-color: var(--color_tone_2);
+    color: black;
+    box-shadow: var(--box_shadow_1);
+    border: none;
+}
+
+    button[type="submit"]:hover {
+        background-color: var(--color_tone_3); /* Adds hover effect */
+    }
+
+/* Line Height */
+label,
+input,
+button {
+    line-height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    #FOCUS {
+        width: 90%;
+        min-width: 300px;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+}
